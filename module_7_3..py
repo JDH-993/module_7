@@ -10,7 +10,7 @@ class WordsFinder:
         for i in range(len(g)):
             for k in range(len(g[self.file_names[i]])):
                 if word.lower() == g[self.file_names[i]][k]:
-                    o = {self.file_names[i]: k}
+                    o = {self.file_names[i]: k+1}
                     return o
 
     def count(self, wor):
@@ -44,5 +44,5 @@ class WordsFinder:
 
 finder2 = WordsFinder('test_file.txt')
 print(finder2.get_all_words()) # Все слова
-print(finder2.find('MY')) # 3 слово по счёту
-print(finder2.count('my')) # 4 слова teXT в тексте всего
+print(finder2.find('MY'))
+print(finder2.count('my'))
